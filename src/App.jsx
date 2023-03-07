@@ -106,16 +106,16 @@ function App() {
                       boxShadow: "1px 0px 6px rgba(0,0,0,0.1)",
                     }}
                   >
-                    <div
+                    <img
                       style={{
                         width: "100%",
                         height: "140px",
                         borderTopLeftRadius: "10px",
                         borderTopRightRadius: "10px",
-                        backgroundSize: "cover",
-                        backgroundImage: `url(${value.flags.png})`,
                       }}
-                    ></div>
+                      src={value.flags.png}
+                      alt=""
+                    />
                     <p className="country_name">{value.name}</p>
                     <p className="text">
                       Population:
@@ -156,16 +156,16 @@ function App() {
                         boxShadow: "1px 0px 6px rgba(0,0,0,0.1)",
                       }}
                     >
-                      <div
+                      <img
                         style={{
                           width: "100%",
                           height: "140px",
                           borderTopLeftRadius: "10px",
                           borderTopRightRadius: "10px",
-                          backgroundSize: "cover",
-                          backgroundImage: `url(${value.flags.png})`,
                         }}
-                      ></div>
+                        src={value.flags.png}
+                        alt=""
+                      />
                       <p className="country_name">{value.name}</p>
                       <p className="text">
                         Population:
@@ -205,16 +205,16 @@ function App() {
                         boxShadow: "1px 0px 6px rgba(0,0,0,0.1)",
                       }}
                     >
-                      <div
+                      <img
                         style={{
                           width: "100%",
                           height: "140px",
                           borderTopLeftRadius: "10px",
                           borderTopRightRadius: "10px",
-                          backgroundSize: "cover",
-                          backgroundImage: `url(${value.flags.png})`,
                         }}
-                      ></div>
+                        src={value.flags.png}
+                        alt=""
+                      />
                       <p className="country_name">{value.name}</p>
                       <p className="text">
                         Population:
@@ -250,14 +250,12 @@ function App() {
             <i className="fa-solid fa-arrow-left back_arrow"></i> Back
           </button>
           <div className="full_details">
-            <div
+            <img
               className="part1"
-              style={{
-                backgroundImage: `url(${val.flags.png})`,
-                height: "320px",
-                backgroundSize: "cover",
-              }}
-            ></div>
+              style={{ height: "320px" }}
+              src={val.flags.png}
+              alt=""
+            />
             <div
               style={{ height: "320px", color: lightText }}
               className="part2"
