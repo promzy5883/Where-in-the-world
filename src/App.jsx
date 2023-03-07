@@ -3,7 +3,7 @@ import "./App.css";
 import UseFetch from "./useFetch";
 
 function App() {
-  const { data, loading, error } = UseFetch("../data.json");
+  const { data, loading, error } = UseFetch("/data.json");
   const [search, setSearch] = useState("");
   const [region, setRegion] = useState("Filter By Region");
   const [dist, setDist] = useState(false);
