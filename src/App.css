@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Outfit&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100%;
+}
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 40px 10px 40px;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.title {
+  font-size: 25px;
+  font-family: "EB Garamond", serif;
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+}
+#moon {
+  padding-right: 4px;
+}
+.dark_mode {
+  font-family: "EB Garamond", serif;
+  font-family: "Outfit", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  cursor: pointer;
+}
+.first_section {
+  width: 100%;
+  z-index: -1;
+  padding: 30px 40px 30px 40px;
+  box-sizing: border-box;
+}
+.second_section {
+  height: calc(100vh - 50px);
+  width: 100%;
+  z-index: -1;
+  padding: 30px 40px 30px 40px;
+  box-sizing: border-box;
+}
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
+.search_box {
+  display: flex;
+  align-items: center;
+  width: 320px;
+  height: 35px;
+  border-radius: 4px;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.1);
+}
+.search_icon {
+  font-size: 13px;
+  padding-left: 10px;
+}
+.search_input {
+  width: 300px;
+  border: none;
+  outline: none;
+  height: 35px;
+  padding-left: 12px;
+  font-family: "EB Garamond", serif;
+  font-family: "Outfit", sans-serif;
+  font-size: 14px;
+}
+.select {
+  border-radius: 4px;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.1);
+  border: none;
+  outline: none;
+  font-family: "EB Garamond", serif;
+  font-family: "Outfit", sans-serif;
+  padding: 2px 8px 2px 8px;
+}
+.countries {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 21% 21% 21% 21%;
+  justify-content: space-between;
+  gap: 35px;
+}
+.country_name {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-family: "EB Garamond", serif;
+  font-family: "Outfit", sans-serif;
+  padding-left: 30px;
+  font-weight: 600;
+}
+.text {
+  padding-bottom: 4px;
+  font-family: "EB Garamond", serif;
+  font-family: "Outfit", sans-serif;
+  padding-left: 30px;
+  font-weight: 500;
+  font-size: 14px;
+}
+.text span {
+  font-weight: 400;
+  padding-left: 3px;
+  font-size: 12px;
+}
+.back_arrow {
+  padding-right: 3px;
+}
+.back_button {
+  padding: 8px 18px 8px 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 1px -1px 8px rgba(0, 0, 0, 0.1);
+  font-family: "EB Garamond", serif;
+  font-family: "Outfit", sans-serif;
+}
+.full_details {
+  padding-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.part1,
+.part2 {
+  width: 46%;
+}
+
+.full_details_heading {
+  padding-top: 30px;
+  font-family: "EB Garamond", serif;
+  font-family: "Outfit", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+.full_details_part {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 50% 50%;
+  padding-bottom: 35px;
+}
+.full_details_part div {
+  width: 100%;
+}
+.details_text {
+  padding-bottom: 4px;
+  font-family: "EB Garamond", serif;
+  font-family: "Outfit", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.details_text span {
+  font-weight: 400;
+  padding-left: 3px;
+  font-size: 14px;
+}
+
+@media (max-width: 500px) {
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 15px 20px 15px;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+  .title {
+    font-size: 20px;
+    font-family: "EB Garamond", serif;
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;
+  }
+  .first_section {
+    width: 100%;
+    z-index: -1;
+    padding: 20px 20px 20px 20px;
+    box-sizing: border-box;
+  }
+  .second_section {
+    height: calc(100vh - 50px);
+    width: 100%;
+    z-index: -1;
+    padding: 20px 20px 20px 20px;
+    box-sizing: border-box;
+    height: auto;
+  }
+  .row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    gap: 20px;
+  }
+  .search_box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    border-radius: 4px;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.1);
+  }
+  .search_input {
+    width: 93%;
+    border: none;
+    outline: none;
+    height: 45px;
+    padding-left: 12px;
+    font-family: "EB Garamond", serif;
+    font-family: "Outfit", sans-serif;
+    font-size: 14px;
+  }
+  .select {
+    border-radius: 4px;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    outline: none;
+    font-family: "EB Garamond", serif;
+    font-family: "Outfit", sans-serif;
+    padding: 2px 8px 2px 8px;
+    width: 50%;
+    height: 45px;
+  }
+  .countries {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: start;
+    gap: 35px;
+  }
+  .full_details {
+    padding-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .part1,
+  .part2 {
+    width: 100%;
+  }
+
+  .full_details_part {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 100%;
+    padding-bottom: 35px;
+    gap: 30px;
+  }
+}
+footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: "EB Garamond", serif;
+  font-family: "Outfit", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+}
