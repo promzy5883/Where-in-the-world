@@ -34,6 +34,7 @@ function App() {
       setLightInput("hsl(0, 0%, 52%)");
     }
   };
+
   return (
     <div className="App">
       <header style={{ backgroundColor: white }}>
@@ -184,8 +185,8 @@ function App() {
                 })}
             {search !== "" &&
               data
-                .filter((c) => {
-                  return c.name === search.toString();
+                .filter((s) => {
+                  return s.name.startsWith(search.toString()) === true;
                 })
                 .map((value) => {
                   return (
