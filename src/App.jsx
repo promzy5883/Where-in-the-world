@@ -74,6 +74,7 @@ function App() {
               style={{ backgroundColor: white, color: lightInput }}
               name="region"
               onChange={(e) => setRegion(e.target.value)}
+              onClick={() => setSearch("")}
               className="select"
             >
               <option value="Filter By Region">Filter By Region</option>
