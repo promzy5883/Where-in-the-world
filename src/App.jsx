@@ -36,11 +36,11 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <main className="App">
       <header style={{ backgroundColor: white }}>
-        <p style={{ color: lightText }} className="title">
+        <h1 style={{ color: lightText }} className="title">
           Where in the world?
-        </p>
+        </h1>
         <p style={{ color: lightText }} className="dark_mode" onClick={darken}>
           <i style={{ color: lightText }} className={icon} id="moon"></i>
           Dark Mode
@@ -71,6 +71,7 @@ function App() {
               />
             </div>
             <select
+              aria-label="Region"
               style={{ backgroundColor: white, color: lightInput }}
               name="region"
               onChange={(e) => setRegion(e.target.value)}
@@ -307,7 +308,7 @@ function App() {
           <a href="https://promzy.netlify.app">Promise</a>
         </p>
       </footer>
-    </div>
+    </main>
   );
 }
 
