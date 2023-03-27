@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import UseFetch from "./useFetch";
 
 function App() {
   const { data, loading, error } = UseFetch("/data.json");
   const [search, setSearch] = useState("");
-  const [region, setRegion] = useState("Filter By Region");
+  const [region, setRegion] = useState("All Countries");
   const [dist, setDist] = useState(false);
   const [val, setVal] = useState(null);
   const [icon, setIcon] = useState("fa-regular fa-moon");
@@ -78,7 +78,7 @@ function App() {
               onClick={() => setSearch("")}
               className="select"
             >
-              <option value="Filter By Region">Filter By Region</option>
+              <option value="All Countries">All Countries</option>
               <option value="Africa">Africa</option>
               <option value="Americas">America</option>
               <option value="Asia">Asia</option>
@@ -86,10 +86,27 @@ function App() {
               <option value="Oceania">Oceania</option>
             </select>
           </div>
+          {loading && (
+            <div
+              style={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
+              <img
+                style={{
+                  width: "30px",
+                  height: "30px",
+                }}
+                src="https://raw.githubusercontent.com/Codelessly/FlutterLoadingGIFs/master/packages/cupertino_activity_indicator_selective.gif"
+                alt=""
+              />
+            </div>
+          )}
           <div className="countries">
-            {loading && <p>Loading...</p>}
             {data &&
-              region === "Filter By Region" &&
+              region === "All Countries" &&
               search === "" &&
               data.map((value) => {
                 return (
@@ -135,7 +152,7 @@ function App() {
                   </div>
                 );
               })}
-            {region !== "Filter By Region" &&
+            {region !== "All Countries" &&
               search === "" &&
               data
                 .filter((c) => {
@@ -186,7 +203,61 @@ function App() {
                   );
                 })}
             {search !== "" &&
+              region === "All Countries" &&
               data
+                .filter((s) => {
+                  return s.name.startsWith(search.toString()) === true;
+                })
+                .map((value) => {
+                  return (
+                    <div
+                      onClick={() => {
+                        setDist(true);
+                        setVal(value);
+                      }}
+                      key={data.indexOf(value)}
+                      style={{
+                        width: "100%",
+                        borderRadius: "10px",
+                        height: "300px",
+                        backgroundColor: white,
+                        cursor: "pointer",
+                        color: lightText,
+                        boxShadow: "1px 0px 6px rgba(0,0,0,0.1)",
+                      }}
+                    >
+                      <img
+                        style={{
+                          width: "100%",
+                          height: "140px",
+                          borderTopLeftRadius: "10px",
+                          borderTopRightRadius: "10px",
+                        }}
+                        src={value.flags.png}
+                        alt=""
+                      />
+                      <p className="country_name">{value.name}</p>
+                      <p className="text">
+                        Population:
+                        <span>{value.population}</span>
+                      </p>
+                      <p className="text">
+                        Region:
+                        <span>{value.region}</span>
+                      </p>
+                      <p className="text">
+                        Capital:
+                        <span>{value.capital}</span>
+                      </p>
+                    </div>
+                  );
+                })}
+            {search !== "" &&
+              region !== "All Countries" &&
+              data
+                .filter((c) => {
+                  return c.region === region;
+                })
                 .filter((s) => {
                   return s.name.startsWith(search.toString()) === true;
                 })
