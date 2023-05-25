@@ -66,10 +66,9 @@ header {
   z-index: -1;
   padding: 30px 40px 30px 40px;
   box-sizing: border-box;
-  min-height: 100vh;
+  min-height: calc(100vh - 52px);
 }
 .second_section {
-  height: calc(100vh - 50px);
   width: 100%;
   z-index: -1;
   padding: 30px 40px 30px 40px;
@@ -102,6 +101,7 @@ header {
   font-family: "EB Garamond", serif;
   font-family: "Outfit", sans-serif;
   font-size: 14px;
+  border-radius: 4px;
 }
 .select {
   border-radius: 4px;
@@ -180,18 +180,29 @@ header {
 .full_details_part div {
   width: 100%;
 }
-.details_text {
+.details_text,
+.borderCountries p {
   padding-bottom: 4px;
   font-family: "EB Garamond", serif;
   font-family: "Outfit", sans-serif;
   font-weight: 500;
   font-size: 15px;
 }
-
+.borderCountries p {
+  align-self: center;
+}
 .details_text span {
   font-weight: 400;
   padding-left: 3px;
   font-size: 14px;
+}
+
+.borderCountries {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 500px) {
